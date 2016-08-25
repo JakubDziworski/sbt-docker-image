@@ -24,4 +24,6 @@ RUN \
 RUN mkdir /app
 WORKDIR /app
 
-CMD ["sbt","run"]
+ENV ADDITIONAL_SBT_ARGS ""
+
+CMD sbt $ADDITIONAL_SBT_ARGS run
